@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فال حافظ شب یلدا</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f8f1e4;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>فال حافظ شما:</h1>
+  <div class="card">
+    <p id="poem">کلیک کنید تا فال شما نمایش داده شود.</p>
+    <button onclick="generatePoem()">بگیر فال!</button>
+  </div>
+
+  <script>
+    const poems = [
+      "هر چه هست از قامت ناساز بی‌اندام ماست...",
+      "بر سر آنم که گر ز دست برآید...",
+      "دوش دیدم که ملائک در میخانه زدند...",
+      "دل می‌رود ز دستم، صاحب دلان خدا را...",
+      "ساقیا برخیز و درده جام را..."
+    ];
+
+    function generatePoem() {
+      const randomIndex = Math.floor(Math.random() * poems.length);
+      document.getElementById("poem").innerText = poems[randomIndex];
+    }
+  </script>
+</body>
+</html>
